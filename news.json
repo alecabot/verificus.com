@@ -1,0 +1,119 @@
+
+{
+  "actualizado": "1 de octubre de 2026",
+  "noticias": [
+    {
+      "categoria": "Sevilla",
+      "medio": "Europa Press",
+      "hace": "hace 1 h",
+      "titular": "La Semana Internacional de la Moda en Andalucía reunirá del 5 al 12 de octubre a diseñadores en Sevilla",
+      "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-semana-internacional-moda-andalucia-reune-12-octubre-disenadores-sevilla-20261001185517.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 96,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Cultura",
+      "medio": "Europa Press",
+      "hace": "hace 2 h",
+      "titular": "La Noche en Blanco 2026 de Sevilla contará con más de 150 actividades culturales",
+      "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-noche-blanco-2026-sevilla-actividades-culturales-espacios-novedades-programacion-20261001170548.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 91,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Actualidad",
+      "medio": "Europa Press",
+      "hace": "hace 3 h",
+      "titular": "La Casa de la Provincia ampliará su horario hasta la una de la madrugada durante la Noche en Blanco",
+      "url": "https://www.europapress.es/andalucia/diputacion-sevilla-01453/noticia-casa-provincia-sevilla-abre-madrugada-viernes-noche-blanco-20261001095552.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 74,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Cultura",
+      "medio": "Europa Press",
+      "hace": "hace 4 h",
+      "titular": "El Festival de la Guitarra de Sevilla homenajeará a Manuel de Falla por el 150 aniversario de su nacimiento",
+      "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-festival-guitarra-homenajea-manuel-falla-150-aniversario-nacimiento-20261001183405.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 87,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Cultura",
+      "medio": "Europa Press",
+      "hace": "hace 5 h",
+      "titular": "Cirktober 2026 llevará espectáculos y talleres de circo a 40 municipios de la provincia de Sevilla",
+      "url": "https://www.europapress.es/andalucia/diputacion-sevilla-01453/noticia-festival-cirktober-2026-inicia-jueves-ruta-circense-40-municipios-provincia-sevilla-20261001140251.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 63,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Economía",
+      "medio": "Europa Press",
+      "hace": "hace 6 h",
+      "titular": "La provincia de Sevilla rozó los 855.000 ocupados durante el primer trimestre de 2026",
+      "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-primer-trimestre-2026-consolida-evolucion-positiva-provincia-sevilla-rozar-855000-ocupados-20260622123548.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 82,
+        "calificacion": "Cierto",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Actualidad",
+      "medio": "Europa Press",
+      "hace": "hace 7 h",
+      "titular": "El Ayuntamiento de Sevilla prepara nuevas actividades por el Día Internacional de las Personas Mayores",
+      "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-ayuntamiento-sevilla-conmemora-dia-personas-mayores-reforzando-apuesta-envejecimiento-activo-20260925144511.html",
+      "fuente_verificada": true,
+      "verificacion": {
+        "porcentaje": 58,
+        "calificacion": "Dudoso",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    },
+    {
+      "categoria": "Actualidad",
+      "medio": "Redes sociales",
+      "hace": "hace 8 h",
+      "titular": "URGENTE: Sevilla anuncia que todas las actividades de la Noche en Blanco serán gratuitas y durarán hasta el amanecer",
+      "url": "",
+      "fuente_verificada": false,
+      "verificacion": {
+        "porcentaje": 14,
+        "calificacion": "Falso",
+        "verificador": "Verificus (simulación)",
+        "url": ""
+      }
+    }
+  ]
+}
+

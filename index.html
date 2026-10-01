@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#12213F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Verificus</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #171717;
+  --muted: #666;
+  --line: #d7d7d7;
+  --paper: #ffffff;
+  --page: #f3f1ed;
+  --accent: #9b1c24;
+  --accent-dark: #74151b;
+  --green: #176b45;
+  --orange: #986000;
+  --red: #a4262c;
+
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR */
+
+.w {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  background: var(--paper);
+  min-height: 100vh;
+}
+
+/* CABECERA */
+
+header {
+  background: #fff;
+  padding: 18px 22px 0;
+  border-top: 5px solid var(--accent);
+}
+
+/* Nombre del periódico */
+
+.brand {
+  margin: 0 0 2px;
+  text-align: center;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* TITULAR PRINCIPAL */
+
+h1 {
+  margin: 0;
+  text-align: center;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 8vw, 62px);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.sub {
+  max-width: 700px;
+  margin: 10px auto 18px;
+  text-align: center;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+/* NAVEGACIÓN */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  overflow-x: auto;
+  border-top: 1px solid var(--line);
+  border-bottom: 3px solid var(--ink);
+}
+
+nav button {
+  flex: none;
+  height: 43px;
+  padding: 0 18px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+
+  background: #fff;
+  color: #333;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+nav button:hover {
+  color: var(--accent);
+}
+
+nav button[aria-selected="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ACCESIBILIDAD */
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* CONTENIDO */
+
+main {
+  background: #fff;
+  min-height: 50vh;
+}
+
+/* NOTICIAS */
+
+article {
+  padding: 24px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+article:first-child {
+  padding-top: 28px;
+}
+
+/* NOTICIA ALERTA */
+
+article.alert {
+  background: #fff8f7;
+  border-left: 4px solid var(--red);
+}
+
+/* METADATOS */
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--muted);
+}
+
+.meta b {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* FUENTE */
+
+.src {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* TITULARES */
+
+h2 {
+  max-width: 900px;
+  margin: 7px 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(24px, 5vw, 34px);
+  line-height: 1.13;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+
+h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: var(--accent);
+}
+
+/* RESULTADO DE VERIFICACIÓN */
+
+.res {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding-top: 12px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.n {
+  min-width: 82px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.l {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.s {
+  margin-top: 2px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.s a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* MENSAJES */
+
+.msg {
+  margin: 0;
+  padding: 40px 22px;
+  text-align: center;
+  color: var(--muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+/* PIE */
+
+footer {
+  padding: 22px;
+  border-top: 3px solid var(--ink);
+
+  background: #f8f7f5;
+
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* PANTALLA DE INSTALACIÓN */
+
+.gate {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #8e1820 0%,
+      #74151b 100%
+    );
+
+  color: #fff;
+}
+
+.gate[hidden] {
+  display: none;
+}
+
+.gb {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+}
+
+.gb h1 {
+  margin: 0 0 18px;
+
+  color: #fff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.gp {
+  margin: 0 auto 24px;
+  max-width: 400px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+#instb {
+  height: 48px;
+  padding: 0 26px;
+
+  border: 0;
+  border-radius: 2px;
+
+  background: #fff;
+  color: var(--accent);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+#instb:hover {
+  background: #f2f2f2;
+}
+
+#instb[hidden] {
+  display: none;
+}
+
+.gi {
+  margin: 18px 0 0;
+
+  color: #f0dddd;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* MÓVIL */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 14px 0 0;
+  }
+
+  .brand {
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .sub {
+    margin: 8px 18px 14px;
+    font-size: 15px;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  nav button {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  article {
+    padding: 20px 18px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .res {
+    gap: 13px;
+  }
+
+  .n {
+    min-width: 70px;
+    font-size: 32px;
+  }
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 900px) {
+
+  body {
+    padding: 24px;
+  }
+
+  .w {
+    box-shadow:
+      0 2px 12px rgba(0,0,0,.08);
+  }
+
+  main {
+    padding: 0 80px;
+  }
+
+  article {
+    padding: 28px 0;
+  }
+
+  article.alert {
+    padding-left: 18px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<section id="gate" class="gate">
+<div class="gb">
+<h1>Verificus</h1>
+<p class="gp">Para usar Verificus, instálala en tu móvil. Después ábrela desde su icono.</p>
+<button id="instb" hidden>Instalar app</button>
+<p id="gi" class="gi"></p>
+</div>
+</section>
+<div class="w" id="app" hidden>
+<header>
+<h1>Verificus</h1>
+<p class="sub">Noticias de medios verificados</p>
+<nav id="tabs" aria-label="Categorías"></nav>
+</header>
+<main id="feed" aria-live="polite"></main>
+<footer id="foot">Solo se muestran medios de una lista verificada. El porcentaje aparece cuando un verificador ha revisado la noticia.</footer>
+</div>
+<script>
+const TABS = ["Inicio", "Actualidad", "Cultura", "Economía", "Ciencia"];
+const OK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>';
+const WARN = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.8L14.5 13H1.5z"/><path d="M8 6.5v3"/><path d="M8 11.4v.1"/></svg>';
+let news = [], tab = "Inicio";
+const $ = s => document.querySelector(s);
+const web = u => /^https?:\/\//.test(u || "");
+function h(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+function rel(n) {
+  if (n.fecha) { const m = Math.round((Date.now() - new Date(n.fecha)) / 60000);
+    return m < 60 ? "hace " + Math.max(m, 1) + " min" : m < 1440 ? "hace " + Math.round(m / 60) + " h" : "hace " + Math.round(m / 1440) + " d"; }
+  return n.hace || "";
+}
+function state(v) {
+  if (!v) return {n: "—", l: "Sin contrastar", c: "#4A5568", s: "Sin verificaciones publicadas todavía"};
+  const p = v.porcentaje, c = p >= 70 ? "#14663F" : p >= 40 ? "#8A5300" : "#A4262C";
+  return {n: p + "%", l: p >= 70 ? "Verificado" : p >= 40 ? "Engañosa" : "Incorrecta", c, s: "Calificada «" + (v.calificacion || "") + "» por " + (v.verificador || "un verificador")};
+}
+function render() {
+  const feed = $("#feed"), list = tab === "Inicio" ? news : news.filter(n => n.categoria === tab);
+  feed.replaceChildren();
+  if (!list.length) { feed.append(h("p", "msg", "No hay noticias en esta categoría.")); return; }
+  list.forEach(n => {
+    const v = n.verificacion, st = state(v), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
+    const a = h("article", alert ? "alert" : "");
+    const m = h("div", "meta"); m.append(h("b", "", n.categoria || ""), h("span", "", (n.medio || "") + " · " + rel(n))); a.append(m);
+    const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
+    sr.innerHTML = n.fuente_verificada ? OK : WARN; sr.append(n.fuente_verificada ? "Fuente verificada" : "Fuente no verificada"); a.append(sr);
+    const t = h("h2"); if (web(n.url)) { const l = h("a", "", n.titular); l.href = n.url; l.target = "_blank"; l.rel = "noopener noreferrer"; t.append(l); } else t.textContent = n.titular || ""; a.append(t);
+    const r = h("div", "res"), num = h("div", "n", st.n); num.style.color = st.c;
+    const d = h("div"), lab = h("div", "l", st.l); lab.style.color = st.c;
+    const sub = h("div", "s", st.s);
+    if (v && web(v.url)) { sub.append(" · "); const l = h("a", "", "Ver verificación"); l.href = v.url; l.target = "_blank"; l.rel = "noopener noreferrer"; sub.append(l); }
+    d.append(lab, sub); r.append(num, d); a.append(r); feed.append(a);
+  });
+}
+function tabs() {
+  const nav = $("#tabs"); nav.replaceChildren();
+  TABS.forEach(t => { const b = h("button", "", t); b.setAttribute("aria-selected", t === tab); b.onclick = () => { tab = t; tabs(); render(); }; nav.append(b); });
+}
+function start() {
+  tabs();
+  fetch("news.json", {cache: "no-cache"}).then(r => r.json()).then(d => { news = d.noticias || []; render(); })
+    .catch(() => $("#feed").append(h("p", "msg", "No se pudieron cargar las noticias. Comprueba tu conexión.")));
+}
+const standalone = ["standalone", "fullscreen", "minimal-ui"].some(m => matchMedia("(display-mode: " + m + ")").matches) || navigator.standalone === true;
+if (standalone) {
+  $("#gate").hidden = true; $("#app").hidden = false; start();
+} else {
+  const ua = navigator.userAgent; let dp = null;
+  $("#gi").textContent = /iphone|ipad|ipod/i.test(ua) ? "En iPhone: abre esta página en Safari, toca Compartir y elige «Añadir a pantalla de inicio»."
+    : /android/i.test(ua) ? "En Android: abre el menú ⋮ de Chrome y toca «Instalar app» o «Añadir a pantalla de inicio»."
+    : "Ábrela desde tu móvil, o instálala con el icono de instalar de la barra de direcciones.";
+  const done = () => { $("#instb").hidden = true; $("#gi").textContent = "Instalada. Ciérrala y ábrela desde el icono de Verificus en tu pantalla de inicio."; };
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); dp = e; $("#instb").hidden = false; });
+  $("#instb").onclick = async () => { if (!dp) return; dp.prompt(); const r = await dp.userChoice; dp = null; if (r.outcome === "accepted") done(); };
+  addEventListener("appinstalled", done);
+}
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
