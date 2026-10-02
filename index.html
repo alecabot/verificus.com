@@ -8,33 +8,55 @@
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Verificus</title>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 *{box-sizing:border-box}
-body{margin:0;background:#F4F6F8;color:#12213F;font:16px/1.5 'Source Sans 3',system-ui,sans-serif}
+body{margin:0;background:#fff;color:#12213F;font:16px/1.5 'Source Sans 3',system-ui,sans-serif}
 .w{max-width:640px;margin:0 auto}
-header{padding:24px 0 0}
-h1{margin:0 20px;font:700 32px 'Source Serif 4',Georgia,serif}
-.sub{margin:4px 20px 12px;color:#4A5568}
-nav{display:flex;gap:4px;padding:0 8px;overflow-x:auto;border-bottom:1px solid #D5DBE3}
-nav button{flex:none;height:44px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;font:600 16px 'Source Sans 3',sans-serif;color:#4A5568;cursor:pointer}
-nav button[aria-selected=true]{color:#12213F;font-weight:700;border-bottom-color:#12213F}
 :focus-visible{outline:3px solid #1F3A8A;outline-offset:2px}
-main{background:#fff;min-height:50vh}
-article{padding:20px;border-bottom:1px solid #D5DBE3}
+.bar{height:44px;padding:0 20px;display:flex;align-items:center;border-bottom:1px solid #D5DBE3;font-size:13px;color:#4A5568}
+.mast{padding:16px 20px 12px;text-align:center;border-bottom:3px double #12213F}
+.mast h1{margin:0;font:900 44px/1.1 'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.lema{margin-top:4px;font-size:11px;font-weight:700;letter-spacing:.16em;color:#4A5568}
+nav{display:flex;gap:2px;padding:0 8px;overflow-x:auto;border-bottom:1px solid #D5DBE3}
+nav button{flex:none;height:44px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;font:600 13px 'Source Sans 3',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#4A5568;cursor:pointer}
+nav button[aria-selected=true]{color:#12213F;font-weight:700;border-bottom-color:#12213F}
+main{min-height:50vh}
+article{border-bottom:1px solid #D5DBE3}
 article.alert{background:#FDF1F0}
-.meta{display:flex;gap:10px;font-size:14px;color:#4A5568}.meta b{color:#12213F}
-.src{margin-top:4px;display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600}
-h2{margin:8px 0 12px;font:600 20px/1.25 'Source Serif 4',Georgia,serif}
+.k{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+h2{font-family:'Playfair Display',Georgia,serif}
 h2 a{color:inherit;text-decoration:none}h2 a:hover{text-decoration:underline}
-.res{display:flex;gap:14px;align-items:center}
-.n{min-width:76px;font:700 34px/1 'Source Serif 4',Georgia,serif}
-.l{font-weight:700}.s{font-size:14px;color:#4A5568}.s a{color:#1F3A8A}
+.m{font-size:13px;color:#4A5568}
+.src{margin-top:6px;display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600}
+.s{font-size:13px;color:#4A5568}.s a{color:#1F3A8A}
+.img{height:200px;background:#C9D1DB;display:flex;align-items:center;justify-content:center;font-size:14px;color:#3D4757;overflow:hidden}
+.img img,.th img{width:100%;height:100%;object-fit:cover;display:block}
+.lead .pad{padding:16px 20px 22px}
+.lead h2{margin:6px 0 8px;font-weight:700;font-size:28px;line-height:1.15}
+.res{margin-top:12px;display:flex;gap:14px;align-items:center}
+.n{min-width:76px;font:700 34px/1 'Playfair Display',Georgia,serif}
+.l{font-weight:700;font-size:16px}
+.row{display:flex;gap:14px;padding:16px 20px}
+.row .tx{flex-grow:1;min-width:0}
+.row h2{margin:4px 0 6px;font-weight:600;font-size:18px;line-height:1.25}
+.vl{margin-top:6px;font-size:14px;font-weight:700}
+.th{flex:none;width:96px;height:96px;background:#C9D1DB;display:flex;align-items:center;justify-content:center;font-size:13px;color:#3D4757;overflow:hidden}
 .msg{padding:20px;color:#4A5568}
-footer{padding:16px 20px 24px;font-size:14px;line-height:1.45;color:#4A5568}
+article.row,article.lead{cursor:pointer}
+.back{display:flex;align-items:center;min-height:44px;padding:0 20px;font-weight:600;color:#1F3A8A;text-decoration:none;border-bottom:1px solid #D5DBE3}
+.dt{margin:6px 0 8px;font-weight:700;font-size:28px;line-height:1.15}
+.sec{margin:24px 0 4px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5568}
+.mj{padding:14px 0;border-top:1px solid #D5DBE3}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:13px;font-weight:700}
+.q{margin:8px 0 4px;font:600 18px/1.3 'Playfair Display',Georgia,serif}
+.ex{margin:0;color:#4A5568}
+.nota{padding:10px 20px;background:#FBF0DC;color:#5C3A00;font-size:13px;font-weight:600}
+.orig{display:inline-block;margin-top:20px;font-weight:600;color:#1F3A8A}
+footer{padding:16px 20px 24px;background:#F4F6F8;font-size:13px;line-height:1.45;color:#4A5568}
 .gate{min-height:100vh;display:grid;place-items:center;padding:24px;background:#12213F;color:#fff}.gate[hidden]{display:none}
-.gb{max-width:420px}.gb h1{margin:0 0 12px;font:700 40px 'Source Serif 4',Georgia,serif}.gp{margin:0 0 20px;font-size:18px}
+.gb{max-width:420px}.gb h1{margin:0 0 12px;font:900 40px 'Playfair Display',Georgia,serif}.gp{margin:0 0 20px;font-size:18px}
 #instb{height:48px;padding:0 24px;border:0;border-radius:8px;background:#fff;color:#12213F;font:700 17px 'Source Sans 3',sans-serif;cursor:pointer}#instb[hidden]{display:none}
 .gi{margin:16px 0 0;font-size:16px;line-height:1.5;color:#D5DBE3}
 </style>
@@ -50,17 +72,17 @@ footer{padding:16px 20px 24px;font-size:14px;line-height:1.45;color:#4A5568}
 </section>
 <div class="w" id="app" hidden>
 <header>
-<h1>Verificus</h1>
-<p class="sub">Noticias de medios verificados</p>
+<div class="bar" id="fecha"></div>
+<div class="mast"><h1>Verificus</h1><div class="lema">NOTICIAS DE FUENTES VERIFICADAS</div></div>
 <nav id="tabs" aria-label="Categorías"></nav>
 </header>
 <main id="feed" aria-live="polite"></main>
-<footer id="foot">Solo se muestran medios de una lista verificada. El porcentaje aparece cuando un verificador ha revisado la noticia.</footer>
+<footer>Solo se muestran medios de una lista verificada. El porcentaje aparece cuando un verificador ha revisado la noticia.</footer>
 </div>
 <script>
 const TABS = ["Inicio", "Actualidad", "Cultura", "Economía", "Ciencia"];
-const OK = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>';
-const WARN = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.8L14.5 13H1.5z"/><path d="M8 6.5v3"/><path d="M8 11.4v.1"/></svg>';
+const OK = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5 8.2l2 2 4-4.4"/></svg>';
+const WARN = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.8L14.5 13H1.5z"/><path d="M8 6.5v3"/><path d="M8 11.4v.1"/></svg>';
 let news = [], tab = "Inicio";
 const $ = s => document.querySelector(s);
 const web = u => /^https?:\/\//.test(u || "");
@@ -75,31 +97,84 @@ function state(v) {
   const p = v.porcentaje, c = p >= 70 ? "#14663F" : p >= 40 ? "#8A5300" : "#A4262C";
   return {n: p + "%", l: p >= 70 ? "Verificado" : p >= 40 ? "Engañosa" : "Incorrecta", c, s: "Calificada «" + (v.calificacion || "") + "» por " + (v.verificador || "un verificador")};
 }
+function link(txt, url) { const a = h("a", "", txt); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; }
+function pic(box, n, ph) {
+  if (web(n.imagen)) { const i = document.createElement("img"); i.src = n.imagen; i.alt = ""; i.loading = "lazy"; i.onerror = () => { i.remove(); box.textContent = ph; }; box.append(i); } else box.textContent = ph;
+}
+function card(n, isLead) {
+  const v = n.verificacion, st = state(v), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
+  const a = h("article", (isLead ? "lead" : "row") + (alert ? " alert" : ""));
+  const k = h("div", "k", (alert ? "Alerta · " : "") + (n.categoria || "")); k.style.color = alert ? "#A4262C" : "#12213F";
+  const t = h("h2"), ta = h("a", "", n.titular || ""); ta.href = "#/noticia/" + n.id; t.append(ta);
+  a.onclick = e => { if (!e.target.closest("a")) location.hash = "#/noticia/" + n.id; };
+  const meta = h("div", "m", (n.medio || "") + " · " + rel(n));
+  const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
+  sr.innerHTML = n.fuente_verificada ? OK : WARN; sr.append(n.fuente_verificada ? "Fuente verificada" : "Fuente no verificada");
+  const sub = h("div", "s", st.s);
+  if (v && web(v.url)) { sub.append(" · "); sub.append(link("Ver verificación", v.url)); }
+  if (isLead) {
+    const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); a.append(im);
+    const pad = h("div", "pad"), r = h("div", "res"), num = h("div", "n", st.n), d = h("div"), lab = h("div", "l", st.l);
+    num.style.color = lab.style.color = st.c; d.append(lab, sub); r.append(num, d); pad.append(k, t, meta, sr, r); a.append(pad);
+  } else {
+    const tx = h("div", "tx"), vl = h("div", "vl", st.n + " · " + st.l); vl.style.color = st.c;
+    tx.append(k, t, meta, sr, vl, sub); const th = h("div", "th"); pic(th, n, "[Imagen]"); a.append(tx, th);
+  }
+  return a;
+}
+let ejemplo = false;
+const TAG = {cierto: ["Cierto", "#14663F", "#E6F3EC"], enganoso: ["Engañoso", "#8A5300", "#FBF0DC"], falso: ["Falso", "#A4262C", "#FDF1F0"]};
 function render() {
   const feed = $("#feed"), list = tab === "Inicio" ? news : news.filter(n => n.categoria === tab);
   feed.replaceChildren();
+  if (ejemplo) feed.append(h("div", "nota", "Noticias de ejemplo: no son noticias reales."));
   if (!list.length) { feed.append(h("p", "msg", "No hay noticias en esta categoría.")); return; }
-  list.forEach(n => {
-    const v = n.verificacion, st = state(v), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
-    const a = h("article", alert ? "alert" : "");
-    const m = h("div", "meta"); m.append(h("b", "", n.categoria || ""), h("span", "", (n.medio || "") + " · " + rel(n))); a.append(m);
-    const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
-    sr.innerHTML = n.fuente_verificada ? OK : WARN; sr.append(n.fuente_verificada ? "Fuente verificada" : "Fuente no verificada"); a.append(sr);
-    const t = h("h2"); if (web(n.url)) { const l = h("a", "", n.titular); l.href = n.url; l.target = "_blank"; l.rel = "noopener noreferrer"; t.append(l); } else t.textContent = n.titular || ""; a.append(t);
-    const r = h("div", "res"), num = h("div", "n", st.n); num.style.color = st.c;
-    const d = h("div"), lab = h("div", "l", st.l); lab.style.color = st.c;
-    const sub = h("div", "s", st.s);
-    if (v && web(v.url)) { sub.append(" · "); const l = h("a", "", "Ver verificación"); l.href = v.url; l.target = "_blank"; l.rel = "noopener noreferrer"; sub.append(l); }
-    d.append(lab, sub); r.append(num, d); a.append(r); feed.append(a);
-  });
+  list.forEach((n, i) => feed.append(card(n, i === 0)));
 }
+function detail(n) {
+  const v = n.verificacion, st = state(v), feed = $("#feed"), ms = n.mensajes || [];
+  feed.replaceChildren();
+  const back = h("a", "back", "← Volver a la portada"); back.href = "#"; feed.append(back);
+  if (ejemplo) feed.append(h("div", "nota", "Noticia de ejemplo: no es una noticia real."));
+  const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); feed.append(im);
+  const pad = h("div", "pad lead"), bad = !n.fuente_verificada || (v && v.porcentaje < 40);
+  const k = h("div", "k", (bad ? "Alerta · " : "") + (n.categoria || "")); k.style.color = bad ? "#A4262C" : "#12213F";
+  const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
+  sr.innerHTML = n.fuente_verificada ? OK : WARN; sr.append(n.fuente_verificada ? "Fuente verificada" : "Fuente no verificada");
+  const r = h("div", "res"), num = h("div", "n", st.n), d = h("div"), lab = h("div", "l", st.l);
+  num.style.color = lab.style.color = st.c;
+  const cnt = k2 => ms.filter(m => m.veredicto === k2).length, parts = [];
+  [["enganoso", "engañoso", "engañosos"], ["falso", "falso", "falsos"], ["cierto", "cierto", "ciertos"]].forEach(([k2, s1, sp]) => { const c = cnt(k2); if (c) parts.push(c + " " + (c === 1 ? s1 : sp)); });
+  d.append(lab, h("div", "s", parts.length ? "Mensajes revisados: " + parts.join(", ") : st.s)); r.append(num, d);
+  pad.append(k, h("h1", "dt", n.titular || ""), h("div", "m", (n.medio || "") + " · " + rel(n)), sr, r);
+  if (n.resumen) { pad.append(h("div", "sec", "De qué trata")); pad.append(h("p", "", n.resumen)); }
+  pad.append(h("div", "sec", "Mensajes revisados"));
+  if (v && ms.length) {
+    ms.forEach(m => {
+      const t = TAG[m.veredicto] || ["Sin verificar", "#4A5568", "#EEF1F5"], it = h("div", "mj"), tg = h("span", "tag", t[0]);
+      tg.style.color = t[1]; tg.style.background = t[2];
+      it.append(tg, h("p", "q", "«" + (m.texto || "") + "»"), h("p", "ex", m.explicacion || "")); pad.append(it);
+    });
+    if (web(v.url)) { const w = h("div", "s"); w.append(link("Ver la verificación completa", v.url)); pad.append(w); }
+  } else pad.append(h("p", "ex", "Todavía no hay mensajes revisados para esta noticia."));
+  if (web(n.url)) { const o = link("Leer la noticia original", n.url); o.className = "orig"; pad.append(o); }
+  feed.append(pad);
+}
+function route() {
+  const m = location.hash.match(/^#\/noticia\/(.+)$/), n = m && news.find(x => String(x.id) === decodeURIComponent(m[1]));
+  if (n) detail(n); else render();
+  scrollTo(0, 0);
+}
+addEventListener("hashchange", route);
 function tabs() {
   const nav = $("#tabs"); nav.replaceChildren();
-  TABS.forEach(t => { const b = h("button", "", t); b.setAttribute("aria-selected", t === tab); b.onclick = () => { tab = t; tabs(); render(); }; nav.append(b); });
+  TABS.forEach(t => { const b = h("button", "", t); b.setAttribute("aria-selected", t === tab); b.onclick = () => { tab = t; tabs(); if (location.hash.length > 1) location.hash = ""; else route(); }; nav.append(b); });
 }
 function start() {
+  const f = new Date().toLocaleDateString("es-ES", {weekday: "long", day: "numeric", month: "long", year: "numeric"});
+  $("#fecha").textContent = f.charAt(0).toUpperCase() + f.slice(1);
   tabs();
-  fetch("news.json", {cache: "no-cache"}).then(r => r.json()).then(d => { news = d.noticias || []; render(); })
+  fetch("news.json", {cache: "no-cache"}).then(r => r.json()).then(d => { news = d.noticias || []; ejemplo = !!d.ejemplo; route(); })
     .catch(() => $("#feed").append(h("p", "msg", "No se pudieron cargar las noticias. Comprueba tu conexión.")));
 }
 const standalone = ["standalone", "fullscreen", "minimal-ui"].some(m => matchMedia("(display-mode: " + m + ")").matches) || navigator.standalone === true;

@@ -1,4 +1,4 @@
-const C = "verificus-v1";
+const C = "verificus-v3";
 const F = ["./", "index.html", "news.json", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(C).then(c => c.addAll(F))); self.skipWaiting(); });
 self.addEventListener("activate", e => {

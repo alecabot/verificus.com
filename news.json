@@ -1,8 +1,155 @@
-{"actualizado":"[fecha de actualización]","noticias":[
-{"categoria":"Actualidad","medio":"[Medio]","hace":"hace 1 h","titular":"[Titular de actualidad con datos oficiales]","url":"","fuente_verificada":true,"verificacion":{"porcentaje":94,"calificacion":"Cierto","verificador":"[Verificador]","url":""}},
-{"categoria":"Cultura","medio":"[Medio]","hace":"hace 2 h","titular":"[Titular sobre un estreno cultural]","url":"","fuente_verificada":true,"verificacion":null},
-{"categoria":"Actualidad","medio":"[Medio]","hace":"hace 3 h","titular":"[Titular alarmista que circula en redes]","url":"","fuente_verificada":false,"verificacion":{"porcentaje":8,"calificacion":"Falso","verificador":"[Verificador]","url":""}},
-{"categoria":"Economía","medio":"[Medio]","hace":"hace 4 h","titular":"[Titular de economía con una cifra citada]","url":"","fuente_verificada":true,"verificacion":{"porcentaje":76,"calificacion":"Cierto","verificador":"[Verificador]","url":""}},
-{"categoria":"Cultura","medio":"[Medio]","hace":"hace 5 h","titular":"[Titular sobre un estreno con datos de taquilla]","url":"","fuente_verificada":true,"verificacion":{"porcentaje":89,"calificacion":"Cierto","verificador":"[Verificador]","url":""}},
-{"categoria":"Ciencia","medio":"[Medio]","hace":"hace 6 h","titular":"[Titular de ciencia sobre un estudio]","url":"","fuente_verificada":true,"verificacion":null}
-]}
+{
+ "ejemplo": true,
+ "actualizado": "[fecha de actualización]",
+ "noticias": [
+  {
+   "id": "1",
+   "categoria": "Actualidad",
+   "medio": "[Medio]",
+   "hace": "hace 1 h",
+   "titular": "Sevilla vive una jornada de calor por encima de la media para esta época del año",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia recoge las temperaturas registradas en la ciudad durante la jornada y las compara con los valores habituales de octubre.",
+   "verificacion": {
+    "porcentaje": 94,
+    "calificacion": "Cierto",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "mensajes": [
+    {
+     "veredicto": "cierto",
+     "texto": "Las temperaturas superan la media de octubre",
+     "explicacion": "Coincide con los datos oficiales de [organismo de meteorología]."
+    }
+   ]
+  },
+  {
+   "id": "2",
+   "categoria": "Cultura",
+   "medio": "[Medio]",
+   "hace": "hace 2 h",
+   "titular": "La Bienal de Flamenco anuncia nuevos espectáculos en teatros de la ciudad",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia presenta la programación anunciada para los próximos meses.",
+   "verificacion": null,
+   "mensajes": []
+  },
+  {
+   "id": "3",
+   "categoria": "Actualidad",
+   "medio": "[Medio]",
+   "hace": "hace 3 h",
+   "titular": "Circula un mensaje que asegura que la Feria de Abril cambia de ubicación el próximo año",
+   "url": "",
+   "fuente_verificada": false,
+   "resumen": "Un mensaje reenviado por redes sociales afirma que la Feria se trasladará a otro recinto.",
+   "verificacion": {
+    "porcentaje": 8,
+    "calificacion": "Falso",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "mensajes": [
+    {
+     "veredicto": "falso",
+     "texto": "La Feria de Abril se traslada a otro recinto el próximo año",
+     "explicacion": "No hay ningún anuncio oficial que lo respalde. Los organizadores no han comunicado ningún cambio de ubicación."
+    }
+   ]
+  },
+  {
+   "id": "4",
+   "categoria": "Economía",
+   "medio": "[Medio]",
+   "hace": "hace 4 h",
+   "titular": "El precio de la vivienda en Sevilla se dispara un 30 % en un año, según un portal inmobiliario",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia atribuye a un portal inmobiliario una subida de precios muy superior a la de otros indicadores.",
+   "verificacion": {
+    "porcentaje": 45,
+    "calificacion": "Engañoso",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "mensajes": [
+    {
+     "veredicto": "enganoso",
+     "texto": "El precio de la vivienda se dispara un 30 % en un año",
+     "explicacion": "La cifra es real, pero se refiere solo a anuncios de obra nueva en una zona concreta, no al conjunto de la ciudad."
+    },
+    {
+     "veredicto": "cierto",
+     "texto": "Los precios de la vivienda han subido en el último año",
+     "explicacion": "La tendencia al alza coincide con los datos de [fuente estadística]."
+    }
+   ]
+  },
+  {
+   "id": "5",
+   "categoria": "Cultura",
+   "medio": "[Medio]",
+   "hace": "hace 5 h",
+   "titular": "La exposición sobre el Barroco sevillano supera los 50.000 visitantes",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia informa de la afluencia de público a la muestra desde su inauguración.",
+   "verificacion": {
+    "porcentaje": 89,
+    "calificacion": "Cierto",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "mensajes": [
+    {
+     "veredicto": "cierto",
+     "texto": "La exposición ha superado los 50.000 visitantes",
+     "explicacion": "Coincide con el recuento publicado por [institución organizadora]."
+    }
+   ]
+  },
+  {
+   "id": "6",
+   "categoria": "Economía",
+   "medio": "[Medio]",
+   "hace": "hace 6 h",
+   "titular": "La ocupación hotelera en Sevilla se mantiene por encima del 80 % durante el puente",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia recoge la ocupación de los hoteles de la ciudad durante el fin de semana largo.",
+   "verificacion": {
+    "porcentaje": 76,
+    "calificacion": "Cierto",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "mensajes": [
+    {
+     "veredicto": "cierto",
+     "texto": "La ocupación hotelera supera el 80 %",
+     "explicacion": "Coincide con los datos de [asociación hotelera]."
+    },
+    {
+     "veredicto": "enganoso",
+     "texto": "Es la mejor cifra de la historia",
+     "explicacion": "El dato es alto, pero hubo fines de semana con ocupación mayor en años anteriores."
+    }
+   ]
+  },
+  {
+   "id": "7",
+   "categoria": "Ciencia",
+   "medio": "[Medio]",
+   "hace": "hace 7 h",
+   "titular": "Investigadores sevillanos analizan el efecto del calor sobre el olivar",
+   "url": "",
+   "fuente_verificada": true,
+   "resumen": "La noticia presenta un estudio en marcha sobre cómo afectan las altas temperaturas al cultivo.",
+   "verificacion": null,
+   "mensajes": []
+  }
+ ]
+}
