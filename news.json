@@ -19,10 +19,21 @@
    },
    "mensajes": [
     {
+     "fragmento": "temperaturas muy por encima de lo habitual",
      "veredicto": "cierto",
-     "texto": "Las temperaturas superan la media de octubre",
      "explicacion": "Coincide con los datos oficiales de [organismo de meteorología]."
+    },
+    {
+     "fragmento": "han superado la media de octubre en varios grados",
+     "veredicto": "cierto",
+     "explicacion": "El dato coincide con la serie histórica publicada por [organismo de meteorología]."
     }
+   ],
+   "cuerpo": [
+    "Sevilla ha registrado este jueves temperaturas muy por encima de lo habitual para la primera semana de octubre, con máximas que han rondado los 33 grados en buena parte de la ciudad.",
+    "Los termómetros han superado la media de octubre en varios grados, según los datos oficiales de [organismo de meteorología], que recuerdan que los otoños cálidos se han vuelto más frecuentes en el valle del Guadalquivir.",
+    "Los expertos consultados atribuyen la situación a una masa de aire cálido sobre el suroeste peninsular y prevén que las temperaturas bajen de forma gradual a partir del fin de semana.",
+    "Mientras tanto, las autoridades sanitarias recomiendan evitar las horas centrales del día y mantener la hidratación, especialmente entre personas mayores y niños."
    ]
   },
   {
@@ -35,7 +46,12 @@
    "fuente_verificada": true,
    "resumen": "La noticia presenta la programación anunciada para los próximos meses.",
    "verificacion": null,
-   "mensajes": []
+   "mensajes": [],
+   "cuerpo": [
+    "La Bienal de Flamenco ha presentado los nuevos espectáculos que se podrán ver en varios teatros de la ciudad durante los próximos meses.",
+    "La programación combina nombres consolidados del cante y el baile con propuestas de artistas jóvenes, y ofrece funciones tanto en grandes teatros como en espacios más pequeños.",
+    "Las entradas se pondrán a la venta en las próximas semanas a través de los canales habituales, según han informado los organizadores."
+   ]
   },
   {
    "id": "3",
@@ -54,10 +70,25 @@
    },
    "mensajes": [
     {
+     "fragmento": "la Feria de Abril se trasladará a otro recinto a partir del año que viene",
      "veredicto": "falso",
-     "texto": "La Feria de Abril se traslada a otro recinto el próximo año",
      "explicacion": "No hay ningún anuncio oficial que lo respalde. Los organizadores no han comunicado ningún cambio de ubicación."
+    },
+    {
+     "fragmento": "fuentes cercanas",
+     "veredicto": "enganoso",
+     "explicacion": "El mensaje no identifica ninguna fuente concreta, lo que impide comprobar de dónde sale la información."
+    },
+    {
+     "fragmento": "antes de que lo desmientan",
+     "veredicto": "enganoso",
+     "explicacion": "Es una técnica habitual en los bulos: pedir que se comparta rápido para evitar que se compruebe."
     }
+   ],
+   "cuerpo": [
+    "Un mensaje que circula desde hace horas por grupos de mensajería y redes sociales asegura que la Feria de Abril se trasladará a otro recinto a partir del año que viene.",
+    "El texto, que se presenta como información adelantada de «fuentes cercanas», afirma que la decisión «ya está tomada» y pide a los usuarios que lo compartan «antes de que lo desmientan».",
+    "Hasta el momento, los organizadores no han comunicado ningún cambio de ubicación, y el calendario de la próxima edición sigue sin modificaciones."
    ]
   },
   {
@@ -77,15 +108,26 @@
    },
    "mensajes": [
     {
+     "fragmento": "se ha disparado un 30 % en un solo año",
      "veredicto": "enganoso",
-     "texto": "El precio de la vivienda se dispara un 30 % en un año",
      "explicacion": "La cifra es real, pero se refiere solo a anuncios de obra nueva en una zona concreta, no al conjunto de la ciudad."
     },
     {
+     "fragmento": "la demanda de compradores extranjeros",
+     "veredicto": "enganoso",
+     "explicacion": "El informe lo presenta como causa principal sin aportar datos que lo demuestren."
+    },
+    {
+     "fragmento": "los precios han subido en el último año",
      "veredicto": "cierto",
-     "texto": "Los precios de la vivienda han subido en el último año",
      "explicacion": "La tendencia al alza coincide con los datos de [fuente estadística]."
     }
+   ],
+   "cuerpo": [
+    "El precio de la vivienda en Sevilla se ha disparado un 30 % en un solo año, según un informe difundido por un portal inmobiliario que ha tenido amplia repercusión en redes sociales.",
+    "El informe, basado en los anuncios publicados en la plataforma, sitúa a la ciudad entre las capitales donde más han crecido los precios y atribuye la subida a la escasez de oferta y a la demanda de compradores extranjeros.",
+    "Sin embargo, otros indicadores muestran un aumento más moderado. Los datos de [fuente estadística] confirman que los precios han subido en el último año, aunque a un ritmo inferior al que recoge el portal.",
+    "Los analistas consultados piden cautela al comparar cifras de distinto origen y recuerdan que los precios de los anuncios no siempre coinciden con los de las compraventas finales."
    ]
   },
   {
@@ -105,10 +147,15 @@
    },
    "mensajes": [
     {
+     "fragmento": "ha superado los 50.000 visitantes",
      "veredicto": "cierto",
-     "texto": "La exposición ha superado los 50.000 visitantes",
      "explicacion": "Coincide con el recuento publicado por [institución organizadora]."
     }
+   ],
+   "cuerpo": [
+    "La exposición dedicada al Barroco sevillano ha superado los 50.000 visitantes desde su inauguración, según el recuento facilitado por la institución organizadora.",
+    "La muestra reúne pinturas, esculturas y documentos de los siglos XVII y XVIII, y ha ampliado su horario los fines de semana para atender la demanda.",
+    "Los responsables destacan la presencia de público local y de visitantes llegados de otras provincias, y prevén que la exposición continúe abierta hasta principios del próximo año."
    ]
   },
   {
@@ -128,15 +175,21 @@
    },
    "mensajes": [
     {
+     "fragmento": "por encima del 80 %",
      "veredicto": "cierto",
-     "texto": "La ocupación hotelera supera el 80 %",
      "explicacion": "Coincide con los datos de [asociación hotelera]."
     },
     {
+     "fragmento": "la mejor cifra de la historia",
      "veredicto": "enganoso",
-     "texto": "Es la mejor cifra de la historia",
-     "explicacion": "El dato es alto, pero hubo fines de semana con ocupación mayor en años anteriores."
+     "explicacion": "El dato es alto, pero hubo puentes con ocupación mayor en años anteriores y la propia asociación admite que no tiene series completas."
     }
+   ],
+   "cuerpo": [
+    "La ocupación hotelera en Sevilla se ha mantenido por encima del 80 % durante el puente, según los datos de la asociación del sector.",
+    "Los hoteles del centro histórico han llegado a completar prácticamente todas sus habitaciones el sábado, y el turismo nacional ha sido el principal motor de las reservas.",
+    "Desde la asociación señalan que esta es la mejor cifra de la historia para un puente de este tipo, aunque admiten que no disponen de series completas para todos los años.",
+    "El sector confía en mantener la tendencia durante las próximas semanas, apoyada por los eventos culturales previstos en la ciudad."
    ]
   },
   {
@@ -149,7 +202,12 @@
    "fuente_verificada": true,
    "resumen": "La noticia presenta un estudio en marcha sobre cómo afectan las altas temperaturas al cultivo.",
    "verificacion": null,
-   "mensajes": []
+   "mensajes": [],
+   "cuerpo": [
+    "Un grupo de investigadores sevillanos analiza cómo afectan las altas temperaturas al cultivo del olivar, uno de los pilares del campo andaluz.",
+    "El estudio, que se encuentra en su fase inicial, compara el comportamiento de distintas variedades de olivo en parcelas con diferentes condiciones de riego y exposición al sol.",
+    "Los autores esperan tener los primeros resultados en los próximos meses y aspiran a ofrecer recomendaciones prácticas a los agricultores de la zona."
+   ]
   }
  ]
 }
