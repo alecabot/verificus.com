@@ -142,7 +142,6 @@ function detail(n) {
   const v = n.verificacion, st = state(v), feed = $("#feed"), ms = n.mensajes || [];
   feed.replaceChildren();
   const back = h("a", "back", "← Volver a la portada"); back.href = "#"; feed.append(back);
-  if (ejemplo) feed.append(h("div", "nota", "Noticia de ejemplo: no es una noticia real."));
   const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); feed.append(im);
   if (n.pie) feed.append(h("div", "pie", n.pie));
   const pad = h("div", "dp"), bad = !n.fuente_verificada || (v && v.porcentaje < 40);
