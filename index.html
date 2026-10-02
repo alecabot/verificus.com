@@ -135,7 +135,6 @@ const TAG = {cierto: ["Cierto", "#14663F", "#E6F3EC"], enganoso: ["Engañoso", "
 function render() {
   const feed = $("#feed"), list = tab === "Inicio" ? news : news.filter(n => n.categoria === tab);
   feed.replaceChildren();
-  if (ejemplo) feed.append(h("div", "nota", "Noticias de ejemplo: no son noticias reales."));
   if (!list.length) { feed.append(h("p", "msg", "No hay noticias en esta categoría.")); return; }
   list.forEach((n, i) => feed.append(card(n, i === 0)));
 }
