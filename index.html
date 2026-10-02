@@ -61,6 +61,7 @@ article.row,article.lead{cursor:pointer}
 .nm{margin-left:3px;font:700 11px 'Source Sans 3',sans-serif}
 .v-enganoso .nm{color:#8A5300}.v-falso .nm{color:#A4262C}.v-cierto .nm{color:#14663F}
 .leg{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px;font-size:13px}.leg span{padding:2px 8px;border-radius:2px}
+.pie{padding:6px 20px 0;font-size:12px;color:#4A5568}
 .orig{display:inline-block;margin-top:20px;font-weight:600;color:#1F3A8A}
 footer{padding:16px 20px 24px;background:#F4F6F8;font-size:13px;line-height:1.45;color:#4A5568}
 .gate{min-height:100vh;display:grid;place-items:center;padding:24px;background:#12213F;color:#fff}.gate[hidden]{display:none}
@@ -107,7 +108,7 @@ function state(v) {
 }
 function link(txt, url) { const a = h("a", "", txt); a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer"; return a; }
 function pic(box, n, ph) {
-  if (web(n.imagen)) { const i = document.createElement("img"); i.src = n.imagen; i.alt = ""; i.loading = "lazy"; i.onerror = () => { i.remove(); box.textContent = ph; }; box.append(i); } else box.textContent = ph;
+  if (n.imagen && (web(n.imagen) || /^img\//.test(n.imagen))) { const i = document.createElement("img"); i.src = n.imagen; i.alt = ""; i.loading = "lazy"; i.onerror = () => { i.remove(); box.textContent = ph; }; box.append(i); } else box.textContent = ph;
 }
 function card(n, isLead) {
   const v = n.verificacion, st = state(v), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
@@ -145,6 +146,7 @@ function detail(n) {
   const back = h("a", "back", "← Volver a la portada"); back.href = "#"; feed.append(back);
   if (ejemplo) feed.append(h("div", "nota", "Noticia de ejemplo: no es una noticia real."));
   const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); feed.append(im);
+  if (n.pie) feed.append(h("div", "pie", n.pie));
   const pad = h("div", "dp"), bad = !n.fuente_verificada || (v && v.porcentaje < 40);
   const k = h("div", "k", (bad ? "Alerta · " : "") + (n.categoria || "")); k.style.color = bad ? "#A4262C" : "#12213F";
   const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
