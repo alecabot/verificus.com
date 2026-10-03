@@ -1,5 +1,5 @@
 {
- "ejemplo": true,
+ "ejemplo": false,
  "actualizado": "[fecha de actualización]",
  "noticias": [
   {
@@ -36,7 +36,7 @@
     "Mientras tanto, las autoridades sanitarias recomiendan evitar las horas centrales del día y mantener la hidratación, especialmente entre personas mayores y niños."
    ],
    "imagen": "img/n1.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "informativo",
    "fuentes_contrastadas": [
     {
@@ -72,7 +72,7 @@
     "Las entradas se pondrán a la venta en las próximas semanas a través de los canales habituales, según han informado los organizadores."
    ],
    "imagen": "img/n2.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "informativo",
    "fuentes_contrastadas": []
   },
@@ -114,7 +114,7 @@
     "Hasta el momento, los organizadores no han comunicado ningún cambio de ubicación, y el calendario de la próxima edición sigue sin modificaciones."
    ],
    "imagen": "img/n3.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "viral",
    "fuentes_contrastadas": [
     {
@@ -172,7 +172,7 @@
     "Los analistas consultados piden cautela al comparar cifras de distinto origen y recuerdan que los precios de los anuncios no siempre coinciden con los de las compraventas finales."
    ],
    "imagen": "img/n4.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "informativo",
    "fuentes_contrastadas": [
     {
@@ -226,7 +226,7 @@
     "Los responsables destacan la presencia de público local y de visitantes llegados de otras provincias, y prevén que la exposición continúe abierta hasta principios del próximo año."
    ],
    "imagen": "img/n5.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "reportaje",
    "fuentes_contrastadas": [
     {
@@ -272,7 +272,7 @@
     "El sector confía en mantener la tendencia durante las próximas semanas, apoyada por los eventos culturales previstos en la ciudad."
    ],
    "imagen": "img/n6.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "informativo",
    "fuentes_contrastadas": [
     {
@@ -308,7 +308,7 @@
     "Los autores esperan tener los primeros resultados en los próximos meses y aspiran a ofrecer recomendaciones prácticas a los agricultores de la zona."
    ],
    "imagen": "img/n7.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "tipo": "informativo",
    "fuentes_contrastadas": []
   },
@@ -321,7 +321,7 @@
    "titular": "Sevilla necesita más sombra, y la necesita ya",
    "url": "",
    "imagen": "img/n1.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "fuente_verificada": true,
    "resumen": "Un columnista defiende que la ciudad debe plantar más árboles y crear refugios climáticos antes del próximo verano.",
    "verificacion": null,
@@ -356,7 +356,7 @@
    "titular": "Crítica: una noche de flamenco que sabe a poco",
    "url": "",
    "imagen": "img/n2.svg",
-   "pie": "Ilustración de ejemplo",
+   "pie": "Ilustración",
    "fuente_verificada": true,
    "resumen": "El crítico valora el estreno de la Bienal con un balance desigual: buen cante, puesta en escena discreta.",
    "verificacion": null,
@@ -378,6 +378,59 @@
      "clase": "oficial",
      "postura": "confirma",
      "nota": "Comunicó que se agotaron todas las entradas de la función.",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "10",
+   "categoria": "Economía",
+   "tipo": "redactado",
+   "medio": "[Medio]",
+   "hace": "hace 10 h",
+   "titular": "Los comercios del centro de Sevilla adelantan su apertura para huir del calor de la tarde",
+   "url": "",
+   "imagen": "img/n10.svg",
+   "pie": "Ilustración",
+   "fuente_verificada": true,
+   "resumen": "Varios negocios del centro han cambiado su horario para atender a los clientes en las horas más frescas, aunque las cifras sobre el impacto en las ventas no están claras.",
+   "verificacion": {
+    "porcentaje": 72,
+    "calificacion": "Mayormente cierto",
+    "verificador": "[Verificador]",
+    "url": ""
+   },
+   "cuerpo": [
+    "A las nueve de la mañana, cuando la mayoría de las persianas del centro de Sevilla seguía bajada hace unos años, ya hay clientes entrando en algunas tiendas de la calle comercial. El calor de estas semanas ha cambiado el ritmo del comercio y varios negocios han decidido adaptarse.",
+    "Según la asociación de comerciantes, una parte de los establecimientos de la zona abre ahora una hora antes que en verano, y algunos cierran más tarde por la noche para compensar las horas centrales del día, cuando apenas pasa gente por la calle.",
+    "«Por la tarde no entra nadie, así que hemos movido el horario», explica la dueña de una tienda de ropa, que asegura que las ventas de la tarde han caído un 40 % desde que subieron las temperaturas. Otros comerciantes consultados reconocen el descenso, pero no lo cuantifican.",
+    "La asociación pide al Ayuntamiento más sombras y toldos en las calles peatonales, una petición que lleva años sobre la mesa y que ahora vuelve a cobrar fuerza con los otoños cada vez más cálidos."
+   ],
+   "mensajes": [
+    {
+     "fragmento": "abre ahora una hora antes que en verano",
+     "veredicto": "cierto",
+     "explicacion": "Coincide con lo que confirma [asociación de comerciantes]."
+    },
+    {
+     "fragmento": "las ventas de la tarde han caído un 40 %",
+     "veredicto": "enganoso",
+     "explicacion": "El dato procede de un solo comercio, no de cifras del sector, así que no se puede presentar como una caída general."
+    }
+   ],
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Asociación de comerciantes]",
+     "clase": "sector",
+     "postura": "confirma",
+     "nota": "Confirma el cambio de horario de una parte de los establecimientos.",
+     "url": ""
+    },
+    {
+     "nombre": "[Datos del sector comercial]",
+     "clase": "estudio",
+     "postura": "sin_datos",
+     "nota": "No hay datos publicados que respalden una caída del 40 % en las ventas de la tarde.",
      "url": ""
     }
    ]

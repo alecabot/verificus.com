@@ -86,7 +86,7 @@ footer{padding:16px 20px 24px;background:#F4F6F8;font-size:13px;line-height:1.45
 <div class="w" id="app" hidden>
 <header>
 <div class="bar" id="fecha"></div>
-<div class="mast"><h1>Verificus</h1><div class="lema">NOTICIAS DE FUENTES VERIFICADAS</div></div>
+<div class="mast"><h1>Verificus</h1><div class="lema">PERIODISMO CON LA FUENTE A LA VISTA</div></div>
 <nav id="tabs" aria-label="Categorías"></nav>
 </header>
 <main id="feed" aria-live="polite"></main>
@@ -106,7 +106,8 @@ function rel(n) {
   return n.hace || "";
 }
 const TIPO = {
-  informativo: ["Información", "Relata hechos de forma objetiva, sin valoraciones del autor."],
+  informativo: ["Artículo informativo", "Relata hechos de forma objetiva, sin valoraciones del autor."],
+  redactado: ["Artículo redactado", "Escrito por un periodista del propio medio, a partir de su trabajo de campo y de sus propias fuentes."],
   opinion: ["Opinión", "Recoge el punto de vista del autor. No se puntúa: solo se revisan los datos que cita."],
   critica: ["Crítica", "Valoración del autor sobre una obra o un espectáculo. No se puntúa: solo se revisan los datos que cita."],
   editorial: ["Editorial", "Postura del propio medio. No se puntúa: solo se revisan los datos que cita."],
