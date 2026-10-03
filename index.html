@@ -54,13 +54,17 @@ article.row,article.lead{cursor:pointer}
 .q{margin:8px 0 4px;font:600 18px/1.3 'Playfair Display',Georgia,serif}
 .ex{margin:0;color:#4A5568}
 .nota{padding:10px 20px;background:#FBF0DC;color:#5C3A00;font-size:13px;font-weight:600}
-.ent{margin:0 0 4px;font-size:18px;line-height:1.45;color:#4A5568}
+.ent{margin:0 0 16px;font-size:18px;line-height:1.45;color:#4A5568}
 .cuerpo p{margin:0 0 16px;font:18px/1.7 Georgia,'Times New Roman',serif}
 .mk{padding:1px 2px;border-radius:2px;color:#12213F;cursor:pointer}
 .v-enganoso{background:#FBE6BB;border-bottom:2px solid #8A5300}.v-falso{background:#F9D7D4;border-bottom:2px solid #A4262C}.v-cierto{background:#DDF0E5;border-bottom:2px solid #14663F}
 .nm{margin-left:3px;font:700 11px 'Source Sans 3',sans-serif}
 .v-enganoso .nm{color:#8A5300}.v-falso .nm{color:#A4262C}.v-cierto .nm{color:#14663F}
 .leg{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px;font-size:13px}.leg span{padding:2px 8px;border-radius:2px}
+.tipo{margin:12px 0 4px;padding:10px 12px;border:1px solid #D5DBE3;background:#F4F6F8}
+.tl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5568}
+.tn{font-weight:700;font-size:16px}.td{font-size:14px;color:#4A5568}
+.ft{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.fk{font-size:13px;color:#4A5568}
 .pie{padding:6px 20px 0;font-size:12px;color:#4A5568}
 .orig{display:inline-block;margin-top:20px;font-weight:600;color:#1F3A8A}
 footer{padding:16px 20px 24px;background:#F4F6F8;font-size:13px;line-height:1.45;color:#4A5568}
@@ -86,6 +90,7 @@ footer{padding:16px 20px 24px;background:#F4F6F8;font-size:13px;line-height:1.45
 <nav id="tabs" aria-label="Categorías"></nav>
 </header>
 <main id="feed" aria-live="polite"></main>
+<footer>Solo se muestran medios de una lista verificada. El porcentaje aparece cuando un verificador ha revisado la noticia.</footer>
 </div>
 <script>
 const TABS = ["Inicio", "Actualidad", "Cultura", "Economía", "Ciencia"];
@@ -100,7 +105,22 @@ function rel(n) {
     return m < 60 ? "hace " + Math.max(m, 1) + " min" : m < 1440 ? "hace " + Math.round(m / 60) + " h" : "hace " + Math.round(m / 1440) + " d"; }
   return n.hace || "";
 }
-function state(v) {
+const TIPO = {
+  informativo: ["Información", "Relata hechos de forma objetiva, sin valoraciones del autor."],
+  opinion: ["Opinión", "Recoge el punto de vista del autor. No se puntúa: solo se revisan los datos que cita."],
+  critica: ["Crítica", "Valoración del autor sobre una obra o un espectáculo. No se puntúa: solo se revisan los datos que cita."],
+  editorial: ["Editorial", "Postura del propio medio. No se puntúa: solo se revisan los datos que cita."],
+  analisis: ["Análisis", "Interpreta hechos con contexto y explicaciones del autor."],
+  reportaje: ["Reportaje", "Cuenta un tema en profundidad, con testimonios y contexto."],
+  entrevista: ["Entrevista", "Recoge las palabras de una persona. Se revisan los datos que da."],
+  viral: ["Mensaje viral", "Circula por redes o mensajería y no lo firma ningún medio identificable."]
+};
+const NOSCORE = ["opinion", "critica", "editorial"];
+const KIND = {oficial: "Fuente oficial", verificador: "Verificador", agencia: "Agencia", estudio: "Estudio", sector: "Sector", informe: "Informe original"};
+const POS = {confirma: ["Confirma", "#14663F", "#E6F3EC"], desmiente: ["Desmiente", "#A4262C", "#FDF1F0"], matiza: ["Matiza", "#8A5300", "#FBF0DC"], sin_datos: ["Sin datos", "#4A5568", "#EEF1F5"]};
+function state(n) {
+  const v = n.verificacion;
+  if (NOSCORE.includes(n.tipo)) return {n: "—", l: TIPO[n.tipo][0], c: "#4A5568", s: "No se puntúa: solo se revisan los datos que cita"};
   if (!v) return {n: "—", l: "Sin contrastar", c: "#4A5568", s: "Sin verificaciones publicadas todavía"};
   const p = v.porcentaje, c = p >= 70 ? "#14663F" : p >= 40 ? "#8A5300" : "#A4262C";
   return {n: p + "%", l: p >= 70 ? "Verificado" : p >= 40 ? "Engañosa" : "Incorrecta", c, s: "Calificada «" + (v.calificacion || "") + "» por " + (v.verificador || "un verificador")};
@@ -110,23 +130,23 @@ function pic(box, n, ph) {
   if (n.imagen && (web(n.imagen) || /^img\//.test(n.imagen))) { const i = document.createElement("img"); i.src = n.imagen; i.alt = ""; i.loading = "lazy"; i.onerror = () => { i.remove(); box.textContent = ph; }; box.append(i); } else box.textContent = ph;
 }
 function card(n, isLead) {
-  const v = n.verificacion, st = state(v), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
+  const v = n.verificacion, st = state(n), alert = !n.fuente_verificada || (v && v.porcentaje < 40);
   const a = h("article", (isLead ? "lead" : "row") + (alert ? " alert" : ""));
-  const k = h("div", "k", (alert ? "Alerta · " : "") + (n.categoria || "")); k.style.color = alert ? "#A4262C" : "#12213F";
+  const k = h("div", "k", (alert ? "Alerta · " : "") + (n.categoria || "") + " · " + (TIPO[n.tipo] || TIPO.informativo)[0]); k.style.color = alert ? "#A4262C" : "#12213F";
   const t = h("h2"), ta = h("a", "", n.titular || ""); ta.href = "#/noticia/" + n.id; t.append(ta);
   a.onclick = e => { if (!e.target.closest("a")) location.hash = "#/noticia/" + n.id; };
   const meta = h("div", "m", (n.medio || "") + " · " + rel(n));
   const sr = h("div", "src"); sr.style.color = n.fuente_verificada ? "#14663F" : "#A4262C";
   sr.innerHTML = n.fuente_verificada ? OK : WARN; sr.append(n.fuente_verificada ? "Fuente verificada" : "Fuente no verificada");
-  const sub = h("div", "s", st.s);
+  const sub = h("div", "s", st.s), fc = (n.fuentes_contrastadas || []).length, fl = fc ? h("div", "s", "Contrastada con " + fc + (fc === 1 ? " fuente" : " fuentes")) : null;
   if (v && web(v.url)) { sub.append(" · "); sub.append(link("Ver verificación", v.url)); }
   if (isLead) {
     const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); a.append(im);
     const pad = h("div", "pad"), r = h("div", "res"), num = h("div", "n", st.n), d = h("div"), lab = h("div", "l", st.l);
-    num.style.color = lab.style.color = st.c; d.append(lab, sub); r.append(num, d); pad.append(k, t, meta, sr, r); a.append(pad);
+    num.style.color = lab.style.color = st.c; d.append(lab, sub); if (fl) d.append(fl); r.append(num, d); pad.append(k, t, meta, sr, r); a.append(pad);
   } else {
     const tx = h("div", "tx"), vl = h("div", "vl", st.n + " · " + st.l); vl.style.color = st.c;
-    tx.append(k, t, meta, sr, vl, sub); const th = h("div", "th"); pic(th, n, "[Imagen]"); a.append(tx, th);
+    tx.append(k, t, meta, sr, vl, sub); if (fl) tx.append(fl); const th = h("div", "th"); pic(th, n, "[Imagen]"); a.append(tx, th);
   }
   return a;
 }
@@ -135,13 +155,15 @@ const TAG = {cierto: ["Cierto", "#14663F", "#E6F3EC"], enganoso: ["Engañoso", "
 function render() {
   const feed = $("#feed"), list = tab === "Inicio" ? news : news.filter(n => n.categoria === tab);
   feed.replaceChildren();
+  if (ejemplo) feed.append(h("div", "nota", "Noticias de ejemplo: no son noticias reales."));
   if (!list.length) { feed.append(h("p", "msg", "No hay noticias en esta categoría.")); return; }
   list.forEach((n, i) => feed.append(card(n, i === 0)));
 }
 function detail(n) {
-  const v = n.verificacion, st = state(v), feed = $("#feed"), ms = n.mensajes || [];
+  const v = n.verificacion, st = state(n), feed = $("#feed"), ms = n.mensajes || [], ti = TIPO[n.tipo] || TIPO.informativo;
   feed.replaceChildren();
   const back = h("a", "back", "← Volver a la portada"); back.href = "#"; feed.append(back);
+  if (ejemplo) feed.append(h("div", "nota", "Noticia de ejemplo: no es una noticia real."));
   const im = h("div", "img"); pic(im, n, "[Imagen de la noticia]"); feed.append(im);
   if (n.pie) feed.append(h("div", "pie", n.pie));
   const pad = h("div", "dp"), bad = !n.fuente_verificada || (v && v.porcentaje < 40);
@@ -153,7 +175,8 @@ function detail(n) {
   const parts = [];
   [["enganoso", "engañoso", "engañosos"], ["falso", "falso", "falsos"], ["cierto", "cierto", "ciertos"]].forEach(([k2, s1, sp]) => { const c = ms.filter(m => m.veredicto === k2).length; if (c) parts.push(c + " " + (c === 1 ? s1 : sp)); });
   d.append(lab, h("div", "s", parts.length ? "Mensajes revisados: " + parts.join(", ") : st.s)); r.append(num, d);
-  pad.append(k, h("h1", "dt", n.titular || ""), h("div", "m", (n.medio || "") + " · " + rel(n)), sr, r);
+  const tb = h("div", "tipo"); tb.append(h("div", "tl", "Tipo de contenido"), h("div", "tn", ti[0]), h("div", "td", ti[1]));
+  pad.append(k, h("h1", "dt", n.titular || ""), h("div", "m", (n.medio || "") + " · " + rel(n)), sr, tb, r);
   if (ms.length) { const lg = h("div", "leg"); [["enganoso", "Engañoso"], ["falso", "Falso"], ["cierto", "Cierto"]].forEach(([c, t]) => lg.append(h("span", "v-" + c, t))); pad.append(h("div", "sec", "La noticia, con los mensajes marcados"), lg); }
   if (n.resumen) pad.append(h("p", "ent", n.resumen));
   const body = h("div", "cuerpo");
@@ -174,14 +197,25 @@ function detail(n) {
   });
   pad.append(body);
   pad.append(h("div", "sec", "Mensajes revisados"));
-  if (v && ms.length) {
+  if (ms.length) {
     ms.forEach((m, i) => {
       const t = TAG[m.veredicto] || ["Sin verificar", "#4A5568", "#EEF1F5"], it = h("div", "mj"), tg = h("span", "tag", (i + 1) + " · " + t[0]);
       it.id = "mj-" + i; tg.style.color = t[1]; tg.style.background = t[2];
       it.append(tg, h("p", "q", "«" + (m.fragmento || m.texto || "") + "»"), h("p", "ex", m.explicacion || "")); pad.append(it);
     });
-    if (web(v.url)) { const w = h("div", "s"); w.append(link("Ver la verificación completa", v.url)); pad.append(w); }
+    if (v && web(v.url)) { const w = h("div", "s"); w.append(link("Ver la verificación completa", v.url)); pad.append(w); }
   } else pad.append(h("p", "ex", "Todavía no hay mensajes revisados para esta noticia."));
+  pad.append(h("div", "sec", "Fuentes contrastadas"));
+  const fs = n.fuentes_contrastadas || [];
+  if (fs.length) fs.forEach(f => {
+    const it = h("div", "mj"), top = h("div", "ft"), po = POS[f.postura] || POS.sin_datos, tg = h("span", "tag", po[0]);
+    tg.style.color = po[1]; tg.style.background = po[2];
+    top.append(h("b", "", f.nombre || ""), h("span", "fk", KIND[f.clase] || ""), tg); it.append(top);
+    if (f.nota) it.append(h("p", "ex", f.nota));
+    if (web(f.url)) { const w = h("div", "s"); w.append(link("Ver la fuente", f.url)); it.append(w); }
+    pad.append(it);
+  });
+  else pad.append(h("p", "ex", "Todavía no se ha contrastado con ninguna fuente."));
   if (web(n.url)) { const o = link("Leer la noticia original", n.url); o.className = "orig"; pad.append(o); }
   feed.append(pad);
 }

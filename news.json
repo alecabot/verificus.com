@@ -36,7 +36,24 @@
     "Mientras tanto, las autoridades sanitarias recomiendan evitar las horas centrales del día y mantener la hidratación, especialmente entre personas mayores y niños."
    ],
    "imagen": "img/n1.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "informativo",
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Organismo de meteorología]",
+     "clase": "oficial",
+     "postura": "confirma",
+     "nota": "Sus datos sitúan las temperaturas de la jornada por encima de la media de octubre.",
+     "url": ""
+    },
+    {
+     "nombre": "[Agencia de noticias]",
+     "clase": "agencia",
+     "postura": "confirma",
+     "nota": "Su cobertura de la jornada recoge valores similares.",
+     "url": ""
+    }
+   ]
   },
   {
    "id": "2",
@@ -55,7 +72,9 @@
     "Las entradas se pondrán a la venta en las próximas semanas a través de los canales habituales, según han informado los organizadores."
    ],
    "imagen": "img/n2.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "informativo",
+   "fuentes_contrastadas": []
   },
   {
    "id": "3",
@@ -95,7 +114,24 @@
     "Hasta el momento, los organizadores no han comunicado ningún cambio de ubicación, y el calendario de la próxima edición sigue sin modificaciones."
    ],
    "imagen": "img/n3.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "viral",
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Organizadores de la Feria]",
+     "clase": "oficial",
+     "postura": "desmiente",
+     "nota": "No han comunicado ningún cambio de ubicación para la próxima edición.",
+     "url": ""
+    },
+    {
+     "nombre": "[Verificador]",
+     "clase": "verificador",
+     "postura": "desmiente",
+     "nota": "Ha revisado el mensaje y lo califica como falso.",
+     "url": ""
+    }
+   ]
   },
   {
    "id": "4",
@@ -136,7 +172,31 @@
     "Los analistas consultados piden cautela al comparar cifras de distinto origen y recuerdan que los precios de los anuncios no siempre coinciden con los de las compraventas finales."
    ],
    "imagen": "img/n4.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "informativo",
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Fuente estadística]",
+     "clase": "oficial",
+     "postura": "matiza",
+     "nota": "Confirma que los precios suben, pero a un ritmo inferior al que recoge el portal.",
+     "url": ""
+    },
+    {
+     "nombre": "[Portal inmobiliario]",
+     "clase": "informe",
+     "postura": "matiza",
+     "nota": "Su cifra se refiere solo a anuncios de obra nueva en una zona concreta.",
+     "url": ""
+    },
+    {
+     "nombre": "[Verificador]",
+     "clase": "verificador",
+     "postura": "matiza",
+     "nota": "Considera engañoso presentar esa cifra como la de toda la ciudad.",
+     "url": ""
+    }
+   ]
   },
   {
    "id": "5",
@@ -166,7 +226,17 @@
     "Los responsables destacan la presencia de público local y de visitantes llegados de otras provincias, y prevén que la exposición continúe abierta hasta principios del próximo año."
    ],
    "imagen": "img/n5.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "reportaje",
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Institución organizadora]",
+     "clase": "oficial",
+     "postura": "confirma",
+     "nota": "Su recuento de visitantes coincide con el de la noticia.",
+     "url": ""
+    }
+   ]
   },
   {
    "id": "6",
@@ -202,7 +272,24 @@
     "El sector confía en mantener la tendencia durante las próximas semanas, apoyada por los eventos culturales previstos en la ciudad."
    ],
    "imagen": "img/n6.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "informativo",
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Asociación hotelera]",
+     "clase": "sector",
+     "postura": "confirma",
+     "nota": "Sus datos confirman una ocupación superior al 80 %.",
+     "url": ""
+    },
+    {
+     "nombre": "[Estadística oficial de turismo]",
+     "clase": "oficial",
+     "postura": "matiza",
+     "nota": "No hay una serie completa que permita afirmar que es la mejor cifra de la historia.",
+     "url": ""
+    }
+   ]
   },
   {
    "id": "7",
@@ -221,7 +308,79 @@
     "Los autores esperan tener los primeros resultados en los próximos meses y aspiran a ofrecer recomendaciones prácticas a los agricultores de la zona."
    ],
    "imagen": "img/n7.svg",
-   "pie": "Ilustración de ejemplo"
+   "pie": "Ilustración de ejemplo",
+   "tipo": "informativo",
+   "fuentes_contrastadas": []
+  },
+  {
+   "id": "8",
+   "categoria": "Actualidad",
+   "tipo": "opinion",
+   "medio": "[Medio]",
+   "hace": "hace 8 h",
+   "titular": "Sevilla necesita más sombra, y la necesita ya",
+   "url": "",
+   "imagen": "img/n1.svg",
+   "pie": "Ilustración de ejemplo",
+   "fuente_verificada": true,
+   "resumen": "Un columnista defiende que la ciudad debe plantar más árboles y crear refugios climáticos antes del próximo verano.",
+   "verificacion": null,
+   "cuerpo": [
+    "Cada otoño caluroso repite la misma escena: vecinos buscando un banco a la sombra que no existe. Sevilla presume de patios y de naranjos, pero basta pasear por cualquier avenida del extrarradio para comprobar que la ciudad es más cálida de lo que debería ser.",
+    "Se dice con frecuencia que el 70 % de las calles de la ciudad no tiene ninguna sombra durante las horas centrales del día, y es una cifra que debería escandalizarnos. Sea o no exacta, el problema es evidente para cualquiera que camine a mediodía.",
+    "Hace falta plantar más árboles, abrir los colegios como refugios climáticos y pensar cada nueva calle con criterio de sombra. Esperar al próximo verano para actuar sería, otra vez, llegar tarde."
+   ],
+   "mensajes": [
+    {
+     "fragmento": "el 70 % de las calles de la ciudad no tiene ninguna sombra durante las horas centrales del día",
+     "veredicto": "enganoso",
+     "explicacion": "Es una cifra muy repetida, pero no se ha encontrado ningún estudio que la respalde. Presentarla como un hecho es engañoso."
+    }
+   ],
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Estudio sobre arbolado urbano]",
+     "clase": "estudio",
+     "postura": "sin_datos",
+     "nota": "No se ha encontrado ningún dato que respalde la cifra del 70 %.",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "id": "9",
+   "categoria": "Cultura",
+   "tipo": "critica",
+   "medio": "[Medio]",
+   "hace": "hace 9 h",
+   "titular": "Crítica: una noche de flamenco que sabe a poco",
+   "url": "",
+   "imagen": "img/n2.svg",
+   "pie": "Ilustración de ejemplo",
+   "fuente_verificada": true,
+   "resumen": "El crítico valora el estreno de la Bienal con un balance desigual: buen cante, puesta en escena discreta.",
+   "verificacion": null,
+   "cuerpo": [
+    "El estreno de la Bienal llenó el teatro desde la primera fila hasta el gallinero, y el público respondió con entusiasmo a un cante de gran nivel.",
+    "Sin embargo, la puesta en escena se queda corta: la iluminación apenas acompaña y el montaje no aprovecha un elenco que merecía más ambición.",
+    "Es un espectáculo disfrutable, pero que deja la sensación de que podía haber sido mucho más. Una noche correcta para una cita que pedía ser memorable."
+   ],
+   "mensajes": [
+    {
+     "fragmento": "llenó el teatro desde la primera fila hasta el gallinero",
+     "veredicto": "cierto",
+     "explicacion": "Coincide con el aforo completo comunicado por [teatro]."
+    }
+   ],
+   "fuentes_contrastadas": [
+    {
+     "nombre": "[Teatro]",
+     "clase": "oficial",
+     "postura": "confirma",
+     "nota": "Comunicó que se agotaron todas las entradas de la función.",
+     "url": ""
+    }
+   ]
   }
  ]
 }
